@@ -3,7 +3,7 @@ import { StatsItemProps } from "@/types";
 
 function StatsItem({ value, suffix, label }: StatsItemProps) {
   return (
-    <div className="pl-6 border-l-[3px] border-base-300 w-40">
+    <div className="basis-1/2 max-w-40 pl-6 border-l-[3px] border-base-300 lg:w-40 lg:basis-auto">
       <div className="text-3xl font-bold text-text-accent leading-[1.25] tracking-tight mb-1">
         <span>{value}</span>
         <span>{suffix}</span>

@@ -1,4 +1,3 @@
-import ContentContainer from "@/common/components/containers/content-container";
 import EstateContainer from "@/common/components/containers/estate-container";
 import { Heading } from "@/common/components/ui/heading";
 import { Paragraph } from "@/common/components/ui/paragraph";
@@ -30,17 +29,10 @@ function SectionHero() {
   ];
 
   return (
-    <section className="relative flex items-center w-full h-[calc(100vh-6rem)] max-h-[45rem] min-h-[30rem]">
-      <Image
-        src={heroBackground}
-        alt=""
-        width={1400}
-        height={1500}
-        className="absolute right-0 top-0 w-1/2 h-full object-cover -z-1"
-      />
-      <ContentContainer className="flex flex-col gap:6 lg:flex-row lg:gap-0">
-        <div className="basis-1/2 lg:pr-16 bg-[radial-gradient(circle_at_30%_70%,var(--color-secondary-50),white)]">
-          <div className="basis-1/2 mb-20">
+    <section className="relative flex items-center flex-col gap-4 w-full lg:flex-row lg:gap-0 lg:h-[calc(100vh-6rem)] lg:max-h-[45rem] min-h-[30rem]">
+      <div className="basis-1/2 h-full flex items-center py-4 justify-end bg-[radial-gradient(circle_at_50%_90%,var(--color-secondary-50),white)]">
+        <div className="w-full px-8 lg:px-16 lg:w-[32rem] xl:w-[40rem] 2xl:w-[48rem]">
+          <div className="mb-8 lg:mb-20">
             <Heading variant="h1">Buy, rent, or sell your property easily</Heading>
             <Paragraph variant="large" className="text-center lg:text-left">
               A great platform to buy, sell, or even rent
@@ -48,28 +40,35 @@ function SectionHero() {
               your properties without any commisions.
             </Paragraph>
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-8 justify-center lg:justify-start">
             {statsData.map((stat) => (
               <StatsItem key={stat.uid} value={stat.value} suffix={stat.suffix} label={stat.label} />
             ))}
           </div>
         </div>
-        <div className="basis-1/2">
-          <div className="lg:-ml-6 xl:-ml-12">
-            <EstateContainer
-              title={estateData.title}
-              price={estateData.price}
-              address={estateData.address}
-              imageSrc={estateData.imageSrc}
-              imageAlt={estateData.imageAlt}
-              category={estateData.category}
-              categoryVisible={estateData.categoryVisible}
-              addToFavVisible={estateData.addToFavVisible}
-              className="shadow-[0_4px_40px_rgba(230,230,237,1)]"
-            />
-          </div>
+      </div>
+      <div className="relative w-full lg:basis-1/2 h-full flex flex-col justify-center">
+        <Image
+          src={heroBackground}
+          alt=""
+          width={1400}
+          height={1500}
+          className="absolute inset-0 w-full h-full object-cover -z-1 pl-12 pr-8 lg:pl-0 lg:pr-0"
+        />
+        <div className="scale-50 -ml-[25%] lg:scale-none lg:-ml-6 xl:-ml-12">
+          <EstateContainer
+            title={estateData.title}
+            price={estateData.price}
+            address={estateData.address}
+            imageSrc={estateData.imageSrc}
+            imageAlt={estateData.imageAlt}
+            category={estateData.category}
+            categoryVisible={estateData.categoryVisible}
+            addToFavVisible={estateData.addToFavVisible}
+            className="shadow-[0_4px_40px_rgba(230,230,237,1)]"
+          />
         </div>
-      </ContentContainer>
+      </div>
     </section>
   );
 }
