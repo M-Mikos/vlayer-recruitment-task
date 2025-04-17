@@ -10,7 +10,7 @@ interface NavigationItemProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 function NavigationItem({ path, label, title }: NavigationItemProps) {
-  // In mocked data all paths are the same, so styling active state based on current path is ommited
+  // In mocked data all paths are the same, so styling active state based on current path is omitted
 
   return (
     <NavigationMenuItem>
