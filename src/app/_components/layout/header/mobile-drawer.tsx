@@ -1,11 +1,10 @@
 import { Drawer, DrawerClose, DrawerContent, DrawerTitle } from "@/common/components/ui/drawer";
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { Dispatch, SetStateAction } from "react";
 import Navigation from "./navigation";
 import Actions from "./actions";
 import { Button } from "@/common/components/ui/button";
-import closeIcon from "@/../public/icons/close.svg";
-import Image from "next/image";
+import Close from "@/common/components/icons/close";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -15,17 +14,18 @@ interface MobileDrawerProps {
 function MobileDrawer({ isOpen, setIsOpen }: MobileDrawerProps) {
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen} direction="left">
-      <DrawerContent className="p-8 pt-4 gap-16">
-        <VisuallyHidden.Root>
+      <DrawerContent className="p-8 pt-6 gap-16">
+        <VisuallyHidden>
           <DrawerTitle>Navigation Menu</DrawerTitle>
-        </VisuallyHidden.Root>
-        <DrawerClose className="self-end">
-          <Button variant="icon" className="border-0">
-            <Image src={closeIcon} width="32" height="32" alt="Close mobile drawer" unoptimized={true} />
+        </VisuallyHidden>
+        <DrawerClose className="self-end" asChild>
+          <Button variant="icon" className="border-0 text-base-1000 hover:text-secondary-300">
+            <Close className="min-w-8 min-h-8" />
+            <VisuallyHidden>Close navigation menu</VisuallyHidden>
           </Button>
         </DrawerClose>
         <Navigation handleClose={() => setIsOpen(false)} />
-        <Actions />
+        <Actions handleClose={() => setIsOpen(false)} />
       </DrawerContent>
     </Drawer>
   );

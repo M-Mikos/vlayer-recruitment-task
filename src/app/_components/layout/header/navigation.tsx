@@ -25,7 +25,7 @@ function Navigation({ handleClose }: NavigationProps) {
             path={link.path}
             label={link.label}
             title={link.title}
-            onClick={handleClose}
+            handleClose={handleClose}
           />
         ))}
       </NavigationMenuList>

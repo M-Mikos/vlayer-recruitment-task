@@ -7,15 +7,16 @@ interface NavigationItemProps extends React.HTMLAttributes<HTMLElement> {
   path: string;
   label: string;
   title: string;
+  handleClose?: () => void;
 }
 
-function NavigationItem({ path, label, title }: NavigationItemProps) {
+function NavigationItem({ path, label, title, handleClose }: NavigationItemProps) {
   // In mocked data all paths are the same, so styling active state based on current path is omitted
 
   return (
     <NavigationMenuItem>
-      <Link href={path} title={title}>
-        <Button variant="link" className="text-2xl">
+      <Link href={path} title={title} onClick={handleClose}>
+        <Button variant="link" className="text-2xl lg:text-base">
           {label}
         </Button>
       </Link>
