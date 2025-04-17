@@ -6,6 +6,11 @@ import { Heading } from "@/common/components/ui/heading";
 import { Paragraph } from "@/common/components/ui/paragraph";
 import { useState } from "react";
 import TabsSwitch from "./tabs-switch";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/common/components/ui/carousel";
 
 function SectionRealEstates() {
   const realEstatesData = [
@@ -70,7 +75,7 @@ function SectionRealEstates() {
 
   return (
     <section>
-      <ContentContainer className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-8">
         <TabsSwitch tabs={categories} current={category} setTab={setCategory} />
         <div className="max-w-[34rem]">
           <Heading variant="h2" className="lg:text-center">
@@ -82,24 +87,30 @@ function SectionRealEstates() {
             save a bunch of money and time with our services.
           </Paragraph>
         </div>
-        <div className="flex justify-center gap-8">
-          {realEstatesData
-            .filter((estate) => estate.category === category)
-            .map((estate) => (
-              <EstateContainer
-                key={estate.uid}
-                title={estate.title}
-                price={estate.price}
-                address={estate.address}
-                imageSrc={estate.imageSrc}
-                imageAlt={estate.imageAlt}
-                category={estate.category}
-                categoryVisible={true}
-                addToFavVisible={true}
-              />
-            ))}
-        </div>
-      </ContentContainer>
+        <Carousel className="max-w-dvw self-start lg:self-center">
+          <CarouselContent className="px-4">
+            {realEstatesData
+              .filter((estate) => estate.category === category)
+              .map((estate) => (
+                <CarouselItem
+                  key={estate.uid}
+                  className="basis-[90%] sm:basis-[75%] md:basis-1/2 lg:basis-1/3"
+                >
+                  <EstateContainer
+                    title={estate.title}
+                    price={estate.price}
+                    address={estate.address}
+                    imageSrc={estate.imageSrc}
+                    imageAlt={estate.imageAlt}
+                    category={estate.category}
+                    categoryVisible={true}
+                    addToFavVisible={true}
+                  />
+                </CarouselItem>
+              ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
     </section>
   );
 }
