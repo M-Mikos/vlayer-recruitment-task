@@ -4,6 +4,8 @@ import { Dispatch, SetStateAction } from "react";
 import Navigation from "./navigation";
 import Actions from "./actions";
 import { Button } from "@/common/components/ui/button";
+import closeIcon from "@/../public/icons/close.svg";
+import Image from "next/image";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -19,7 +21,7 @@ function MobileDrawer({ isOpen, setIsOpen }: MobileDrawerProps) {
         </VisuallyHidden.Root>
         <DrawerClose className="self-end">
           <Button variant="icon" className="border-0">
-            X
+            <Image src={closeIcon} width="32" height="32" alt="Close mobile drawer" unoptimized={true} />
           </Button>
         </DrawerClose>
         <Navigation handleClose={() => setIsOpen(false)} />
