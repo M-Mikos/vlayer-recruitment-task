@@ -7,15 +7,14 @@ import heroBackground from "@/../public/hero-background.avif";
 import Image from "next/image";
 
 function SectionHero() {
-  const estateData = {
+  const realEstateData = {
+    uid: 1,
     title: "Beverly Springfield",
     price: 2700,
     address: "2821 Lake Sevilla, Palm Harbor, TX",
     imageSrc: "/real-estates/beverly-springfield.avif",
     imageAlt: "Beverly Spiringfield real estate",
     category: "apartments",
-    categoryVisible: false,
-    addToFavVisible: false,
   };
 
   const statsData: StatsItemInterface[] = [
@@ -64,14 +63,14 @@ function SectionHero() {
         />
         <div className="-ml-[25%] scale-50 lg:-ml-6 lg:scale-none xl:-ml-12">
           <EstateContainer
-            title={estateData.title}
-            price={estateData.price}
-            address={estateData.address}
-            imageSrc={estateData.imageSrc}
-            imageAlt={estateData.imageAlt}
-            category={estateData.category}
-            categoryVisible={estateData.categoryVisible}
-            addToFavVisible={estateData.addToFavVisible}
+            title={realEstateData.title}
+            price={realEstateData.price}
+            address={realEstateData.address}
+            imageSrc={realEstateData.imageSrc}
+            imageAlt={realEstateData.imageAlt}
+            category={realEstateData.category}
+            categoryVisible={false}
+            addToFavVisible={false}
             className="shadow-[0_4px_40px_rgba(230,230,237,1)]"
           />
         </div>
