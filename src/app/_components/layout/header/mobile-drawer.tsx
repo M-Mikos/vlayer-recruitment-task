@@ -1,4 +1,4 @@
-import { Drawer, DrawerContent, DrawerTitle } from "@/common/components/ui/drawer";
+import { Drawer, DrawerClose, DrawerContent, DrawerTitle } from "@/common/components/ui/drawer";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { Dispatch, SetStateAction } from "react";
 import Navigation from "./navigation";
@@ -16,6 +16,7 @@ function MobileDrawer({ isOpen, setIsOpen }: MobileDrawerProps) {
         <VisuallyHidden.Root>
           <DrawerTitle>Navigation Menu</DrawerTitle>
         </VisuallyHidden.Root>
+        <DrawerClose>X</DrawerClose>
         <Navigation handleClose={() => setIsOpen(false)} />
         <Actions />
       </DrawerContent>
