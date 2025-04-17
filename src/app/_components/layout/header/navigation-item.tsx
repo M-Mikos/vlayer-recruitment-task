@@ -1,9 +1,6 @@
-import {
-  NavigationMenuItem,
-  NavigationMenuLink,
-  navigationMenuTriggerStyle,
-} from "@/common/components/ui/navigation-menu";
-import clsx from "clsx";
+import { Button } from "@/common/components/ui/button";
+import { NavigationMenuItem } from "@/common/components/ui/navigation-menu";
+
 import Link from "next/link";
 
 interface NavigationItemProps extends React.HTMLAttributes<HTMLElement> {
@@ -13,16 +10,12 @@ interface NavigationItemProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 function NavigationItem({ path, label, title }: NavigationItemProps) {
+  // In mocked data all paths are the same, so styling active state based on current path is ommited
+
   return (
     <NavigationMenuItem>
-      <Link href={path} title={title} passHref>
-        <NavigationMenuLink
-          className={clsx(navigationMenuTriggerStyle(), "m-1")}
-          // All paths are the same, so styling active state is disabled
-          // active={pathname === path}
-        >
-          {label}
-        </NavigationMenuLink>
+      <Link href={path} title={title}>
+        <Button variant="link">{label}</Button>
       </Link>
     </NavigationMenuItem>
   );
