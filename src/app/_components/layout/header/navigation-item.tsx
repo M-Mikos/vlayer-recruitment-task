@@ -1,14 +1,8 @@
 import { Button } from "@/common/components/ui/button";
 import { NavigationMenuItem } from "@/common/components/ui/navigation-menu";
+import { NavigationItemProps } from "@/types";
 
 import Link from "next/link";
-
-interface NavigationItemProps extends React.HTMLAttributes<HTMLElement> {
-  path: string;
-  label: string;
-  title: string;
-  handleClose?: () => void;
-}
 
 function NavigationItem({ path, label, title, handleClose }: NavigationItemProps) {
   // In mocked data all paths are the same, so styling active state based on current path is omitted
