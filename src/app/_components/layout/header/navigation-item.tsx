@@ -15,7 +15,9 @@ function NavigationItem({ path, label, title }: NavigationItemProps) {
   return (
     <NavigationMenuItem>
       <Link href={path} title={title}>
-        <Button variant="link">{label}</Button>
+        <Button variant="link" className="text-2xl">
+          {label}
+        </Button>
       </Link>
     </NavigationMenuItem>
   );

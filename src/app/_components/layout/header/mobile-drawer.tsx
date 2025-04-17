@@ -3,6 +3,7 @@ import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { Dispatch, SetStateAction } from "react";
 import Navigation from "./navigation";
 import Actions from "./actions";
+import { Button } from "@/common/components/ui/button";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -11,12 +12,16 @@ interface MobileDrawerProps {
 
 function MobileDrawer({ isOpen, setIsOpen }: MobileDrawerProps) {
   return (
-    <Drawer open={isOpen} onOpenChange={setIsOpen}>
-      <DrawerContent className="h-dvh items-start">
+    <Drawer open={isOpen} onOpenChange={setIsOpen} direction="left">
+      <DrawerContent className="p-8 pt-4 gap-16">
         <VisuallyHidden.Root>
           <DrawerTitle>Navigation Menu</DrawerTitle>
         </VisuallyHidden.Root>
-        <DrawerClose>X</DrawerClose>
+        <DrawerClose className="self-end">
+          <Button variant="icon" className="border-0">
+            X
+          </Button>
+        </DrawerClose>
         <Navigation handleClose={() => setIsOpen(false)} />
         <Actions />
       </DrawerContent>

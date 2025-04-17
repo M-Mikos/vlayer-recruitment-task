@@ -17,8 +17,8 @@ function Navigation({ handleClose }: NavigationProps) {
   ];
 
   return (
-    <NavigationMenu>
-      <NavigationMenuList className="flex flex-col gap-8 lg:flex-row lg:gap-8 xl:gap-14">
+    <NavigationMenu className="items-start lg:items-center">
+      <NavigationMenuList className="flex flex-col gap-8 items-start lg:items-center lg:flex-row lg:gap-8 xl:gap-14">
         {links.map((link) => (
           <NavigationItem
             key={link.uuid}
