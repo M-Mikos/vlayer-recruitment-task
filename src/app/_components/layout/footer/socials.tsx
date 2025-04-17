@@ -46,6 +46,7 @@ function Socials() {
           label={item.label}
           title={item.title}
           Icon={item.Icon}
+          uid={""}
         />
       ))}
     </ul>

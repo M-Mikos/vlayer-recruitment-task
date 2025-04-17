@@ -1,6 +1,5 @@
 "use client";
 
-import ContentContainer from "@/common/components/containers/content-container";
 import EstateContainer from "@/common/components/containers/estate-container";
 import { Heading } from "@/common/components/ui/heading";
 import { Paragraph } from "@/common/components/ui/paragraph";
