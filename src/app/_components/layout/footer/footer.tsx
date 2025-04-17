@@ -7,7 +7,7 @@ import ContentContainer from "@/common/components/containers/content-container";
 function Footer() {
   return (
     <footer>
-      <ContentContainer className="flex flex-col gap-6 py-32">
+      <ContentContainer className="flex flex-col gap-6 py-8">
         <div className="flex flex-col gap-3 sm:flex-row justify-between">
           <div className="w-32 h-fit">
             <Link title="Go to homepage" href="/">
