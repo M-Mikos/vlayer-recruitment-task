@@ -7,6 +7,7 @@ import { useMediaQuery } from "@/common/hooks/use-media-query";
 import Actions from "./actions";
 import { Button } from "@/common/components/ui/button";
 import Navigation from "./navigation";
+import MobileDrawer from "./mobile-drawer";
 import { useState } from "react";
 
 function Header() {
@@ -15,20 +16,23 @@ function Header() {
 
   return (
     <header>
-      <ContentContainer>
-        <div className="w-32">
+      <ContentContainer className="flex justify-between items-center h-24">
+        <div className="w-32 h-fit">
           <Link title="Go to homepage" href="/">
             <Logo />
           </Link>
         </div>
         {isDesktop ? (
-          <div className="flex items-center gap-12">
+          <div className="flex items-center gap-32">
             <Navigation />
             <Actions />
           </div>
         ) : (
           <div className="flex items-center gap-4">
-            <Button onClick={() => setIsDrawerOpen(true)} variant="icon" className="px-2"></Button>
+            <Button onClick={() => setIsDrawerOpen(true)} variant="icon" className="px-2">
+              +
+            </Button>
+            <MobileDrawer isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
           </div>
         )}
       </ContentContainer>
