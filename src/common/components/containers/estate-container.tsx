@@ -45,13 +45,13 @@ function EstateContainer({
         />
       </div>
       {categoryVisible && (
-        <div className="bg-main-primary text-main-white -mx-4 -ml-2 flex h-8 w-24 items-center justify-center gap-1 rounded-lg rounded-bl-none text-xs uppercase">
+        <div className="bg-main-primary text-main-white after:bg-main-primary absolute -mt-4 -ml-2 flex h-8 min-w-24 items-center justify-center gap-1 rounded-lg rounded-bl-none px-4 text-xs uppercase after:absolute after:-bottom-2 after:left-0 after:block after:h-2 after:w-2 after:content-[''] after:[clip-path:polygon(0%_0%,100%_0%,100%_100%)]">
           <Stars className="h-4 w-4" />
           {category}
         </div>
       )}
       <div className="bg-white p-5">
-        <div className="mb-2 flex gap-6">
+        <div className="mb-2 flex justify-between gap-6">
           <div>
             <div className="mb-1 flex items-center gap-1">
               <span className="text-secondary-500 text-2xl font-extrabold tracking-tight">
