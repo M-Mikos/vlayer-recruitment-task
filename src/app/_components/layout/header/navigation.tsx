@@ -1,14 +1,14 @@
 import { v4 as uuidv4 } from "uuid";
 import { NavigationMenu, NavigationMenuList } from "@/common/components/ui/navigation-menu";
 import NavigationItem from "./navigation-item";
+import { NavigationItemInterface } from "@/types";
 
 interface NavigationProps {
   handleClose?: () => void;
 }
 
 function Navigation({ handleClose }: NavigationProps) {
-  // Mock link data with universally unique identifiers, to prevent react component key repetition.
-  const links = [
+  const links: NavigationItemInterface[] = [
     { uuid: uuidv4(), path: "#", label: "Rent", title: "Go to Rent" },
     { uuid: uuidv4(), path: "#", label: "Buy", title: "Go to Buy" },
     { uuid: uuidv4(), path: "#", label: "Sell", title: "Go to Sell" },
