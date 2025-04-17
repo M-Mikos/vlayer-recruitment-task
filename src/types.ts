@@ -5,7 +5,8 @@ export interface NavigationItemProps extends React.HTMLAttributes<HTMLElement> {
   handleClose?: () => void;
 }
 
-export interface NavigationItemInterface extends Omit<NavigationItemProps, "handleClose"> {
+export interface NavigationItemInterface
+  extends Omit<NavigationItemProps, "handleClose"> {
   uid: string;
 }
 

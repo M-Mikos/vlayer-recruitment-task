@@ -31,27 +31,33 @@ function EstateContainer({
   return (
     <article
       className={clsx(
-        "w-full max-w-[22rem] transition-all rounded-lg overflow-hidden border border-base-200 hover:shadow-[0_4px_40px_rgba(230,230,237,1)]",
-        className
+        "border-base-200 w-full max-w-[22rem] overflow-hidden rounded-lg border transition-all hover:shadow-[0_4px_40px_rgba(230,230,237,1)]",
+        className,
       )}
     >
-      <div className="w-full h-48">
-        <Image src={imageSrc} alt={imageAlt} width={352} height={200} className="w-full h-full object-cover" />
+      <div className="h-48 w-full">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          width={352}
+          height={200}
+          className="h-full w-full object-cover"
+        />
       </div>
       {categoryVisible && (
-        <div className="flex gap-1 items-center justify-center w-24 h-8 text-xs rounded-lg rounded-bl-none bg-main-primary text-main-white uppercase -mx-4 -ml-2">
-          <Stars className="w-4 h-4" />
+        <div className="bg-main-primary text-main-white -mx-4 -ml-2 flex h-8 w-24 items-center justify-center gap-1 rounded-lg rounded-bl-none text-xs uppercase">
+          <Stars className="h-4 w-4" />
           {category}
         </div>
       )}
-      <div className="p-5 bg-white">
-        <div className="flex gap-6 mb-2">
+      <div className="bg-white p-5">
+        <div className="mb-2 flex gap-6">
           <div>
-            <div className="flex items-center gap-1 mb-1">
-              <span className="font-extrabold text-2xl text-secondary-500 tracking-tight">
+            <div className="mb-1 flex items-center gap-1">
+              <span className="text-secondary-500 text-2xl font-extrabold tracking-tight">
                 ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               </span>
-              <span className="font-medium text-main-black/50">/month</span>
+              <span className="text-main-black/50 font-medium">/month</span>
             </div>
             <Heading variant="h4">{title}</Heading>
           </div>
@@ -61,7 +67,7 @@ function EstateContainer({
             </Button>
           )}
         </div>
-        <span className="font-medium text-main-black/50">{address}</span>
+        <span className="text-main-black/50 font-medium">{address}</span>
       </div>
     </article>
   );

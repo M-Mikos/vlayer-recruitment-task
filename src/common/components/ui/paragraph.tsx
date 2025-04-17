@@ -32,7 +32,7 @@ const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Paragraph.displayName = "Paragraph";

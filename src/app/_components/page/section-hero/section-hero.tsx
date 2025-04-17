@@ -29,33 +29,40 @@ function SectionHero() {
   ];
 
   return (
-    <section className="relative flex items-center flex-col gap-4 w-full lg:flex-row lg:gap-0 lg:h-[calc(100vh-6rem)] lg:max-h-[45rem] min-h-[30rem]">
-      <div className="basis-1/2 h-full flex items-center py-4 justify-end bg-[radial-gradient(circle_at_50%_90%,var(--color-secondary-50),white)]">
-        <div className="w-full px-8 lg:px-16 lg:w-[32rem] xl:w-[40rem] 2xl:w-[48rem]">
+    <section className="relative flex min-h-[30rem] w-full flex-col items-center gap-4 lg:h-[calc(100vh-6rem)] lg:max-h-[45rem] lg:flex-row lg:gap-0">
+      <div className="flex h-full basis-1/2 items-center justify-end bg-[radial-gradient(circle_at_50%_90%,var(--color-secondary-50),white)] py-4">
+        <div className="w-full px-8 lg:w-[32rem] lg:px-16 xl:w-[40rem] 2xl:w-[48rem]">
           <div className="mb-8 lg:mb-20">
-            <Heading variant="h1">Buy, rent, or sell your property easily</Heading>
+            <Heading variant="h1">
+              Buy, rent, or sell your property easily
+            </Heading>
             <Paragraph variant="large" className="text-center lg:text-left">
               A great platform to buy, sell, or even rent
               <br className="hidden lg:inline" />
               your properties without any commisions.
             </Paragraph>
           </div>
-          <div className="flex gap-8 justify-center lg:justify-start">
+          <div className="flex justify-center gap-8 lg:justify-start">
             {statsData.map((stat) => (
-              <StatsItem key={stat.uid} value={stat.value} suffix={stat.suffix} label={stat.label} />
+              <StatsItem
+                key={stat.uid}
+                value={stat.value}
+                suffix={stat.suffix}
+                label={stat.label}
+              />
             ))}
           </div>
         </div>
       </div>
-      <div className="relative w-full lg:basis-1/2 h-full flex flex-col justify-center">
+      <div className="relative flex h-full w-full flex-col justify-center lg:basis-1/2">
         <Image
           src={heroBackground}
           alt=""
           width={1400}
           height={1500}
-          className="absolute inset-0 w-full h-full object-cover -z-1 pl-12 pr-8 lg:pl-0 lg:pr-0"
+          className="absolute inset-0 -z-1 h-full w-full object-cover pr-8 pl-12 lg:pr-0 lg:pl-0"
         />
-        <div className="scale-50 -ml-[25%] lg:scale-none lg:-ml-6 xl:-ml-12">
+        <div className="-ml-[25%] scale-50 lg:-ml-6 lg:scale-none xl:-ml-12">
           <EstateContainer
             title={estateData.title}
             price={estateData.price}

@@ -7,16 +7,46 @@ import SocialMediaItem from "./social-media-item";
 
 function Socials() {
   const socialMediaItems: SocialMediaItemInterface[] = [
-    { uid: "1", path: "#", label: "Facebook", title: "Visit Facebook", Icon: Facebook },
-    { uid: "2", path: "#", label: "Instagram", title: "Visit Instagram", Icon: Instagram },
-    { uid: "3", path: "#", label: "Twitter", title: "Visit Twitter", Icon: Twitter },
-    { uid: "4", path: "#", label: "Linkedin", title: "Visit Linkedin", Icon: Linkedin },
+    {
+      uid: "1",
+      path: "#",
+      label: "Facebook",
+      title: "Visit Facebook",
+      Icon: Facebook,
+    },
+    {
+      uid: "2",
+      path: "#",
+      label: "Instagram",
+      title: "Visit Instagram",
+      Icon: Instagram,
+    },
+    {
+      uid: "3",
+      path: "#",
+      label: "Twitter",
+      title: "Visit Twitter",
+      Icon: Twitter,
+    },
+    {
+      uid: "4",
+      path: "#",
+      label: "Linkedin",
+      title: "Visit Linkedin",
+      Icon: Linkedin,
+    },
   ];
 
   return (
     <ul className="flex gap-8">
       {socialMediaItems.map((item) => (
-        <SocialMediaItem key={item.uid} path={item.path} label={item.label} title={item.title} Icon={item.Icon} />
+        <SocialMediaItem
+          key={item.uid}
+          path={item.path}
+          label={item.label}
+          title={item.title}
+          Icon={item.Icon}
+        />
       ))}
     </ul>
   );

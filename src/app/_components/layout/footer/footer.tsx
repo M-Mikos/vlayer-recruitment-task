@@ -8,17 +8,19 @@ function Footer() {
   return (
     <footer>
       <ContentContainer className="flex flex-col gap-6 py-8">
-        <div className="flex flex-col gap-3 sm:flex-row justify-between">
-          <div className="w-32 h-fit">
+        <div className="flex flex-col justify-between gap-3 sm:flex-row">
+          <div className="h-fit w-32">
             <Link title="Go to homepage" href="/">
               <Logo />
             </Link>
           </div>
           <Navigation />
         </div>
-        <hr className="w-full border-t border-base-200" />
-        <div className="flex items-center flex-col gap-6 sm:flex-row sm:justify-between">
-          <span className="text-base-1000 opacity-50">©2021 Estatery. All rights reserved</span>
+        <hr className="border-base-200 w-full border-t" />
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+          <span className="text-base-1000 opacity-50">
+            ©2021 Estatery. All rights reserved
+          </span>
           <Socials />
         </div>
       </ContentContainer>

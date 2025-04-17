@@ -10,7 +10,7 @@ function NavigationItem({ path, label, title }: NavigationItemProps) {
     <NavigationMenuItem>
       <Button
         variant="secondary"
-        className="font-medium uppercase border-transparent text-base-1000/50 hover:border-transparent hover:text-secondary-300"
+        className="text-base-1000/50 hover:text-secondary-300 border-transparent font-medium uppercase hover:border-transparent"
         asChild
       >
         <Link href={path} title={title}>

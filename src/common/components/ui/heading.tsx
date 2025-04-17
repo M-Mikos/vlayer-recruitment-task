@@ -26,13 +26,17 @@ const headingVariants = cva("text-base-1000 font-bold tracking-tight", {
   },
 });
 
-export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement>, VariantProps<typeof headingVariants> {
+export interface HeadingProps
+  extends React.HTMLAttributes<HTMLHeadingElement>,
+    VariantProps<typeof headingVariants> {
   asChild?: boolean;
 }
 
 const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ className, variant = defaultTag, asChild = false, ...props }, ref) => {
-    const Comp: React.ElementType = asChild ? Slot : tagMap[variant || defaultTag];
+    const Comp: React.ElementType = asChild
+      ? Slot
+      : tagMap[variant || defaultTag];
 
     return (
       <Comp
@@ -41,7 +45,7 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Heading.displayName = "Heading";

@@ -4,7 +4,12 @@ import { NavigationItemProps } from "@/types";
 
 import Link from "next/link";
 
-function NavigationItem({ path, label, title, handleClose }: NavigationItemProps) {
+function NavigationItem({
+  path,
+  label,
+  title,
+  handleClose,
+}: NavigationItemProps) {
   // In mocked data all paths are the same, so styling active state based on current path is omitted
 
   return (

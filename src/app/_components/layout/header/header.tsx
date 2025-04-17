@@ -18,8 +18,8 @@ function Header() {
 
   return (
     <header>
-      <ContentContainer className="flex justify-between items-center h-24">
-        <div className="w-32 h-fit">
+      <ContentContainer className="flex h-24 items-center justify-between">
+        <div className="h-fit w-32">
           <Link title="Go to homepage" href="/">
             <Logo />
           </Link>
@@ -34,9 +34,9 @@ function Header() {
             <Button
               onClick={() => setIsDrawerOpen(true)}
               variant="icon"
-              className="border-none text-base-1000 hover:text-secondary-300"
+              className="text-base-1000 hover:text-secondary-300 border-none"
             >
-              <Menu className="min-w-8 min-h-8" />
+              <Menu className="min-h-8 min-w-8" />
               <VisuallyHidden>Open navigation menu</VisuallyHidden>
             </Button>
             <MobileDrawer isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
