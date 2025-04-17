@@ -4,9 +4,9 @@ function Close(props: React.SVGProps<SVGSVGElement>) {
       <path
         d="M25 9L9 25M9 9L25 25"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
