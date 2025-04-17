@@ -67,7 +67,9 @@ function EstateContainer({
             </Button>
           )}
         </div>
-        <span className="text-main-black/50 font-medium">{address}</span>
+        <span className="text-main-black/50 text-sm font-medium">
+          {address}
+        </span>
       </div>
     </article>
   );
