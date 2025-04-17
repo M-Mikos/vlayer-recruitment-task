@@ -4,14 +4,16 @@
 @theme {
   --color-text-accent: #6851ff;
   --color-text-paragraph: #b5b8cb;
+  --color-text-disabled: #717788;
 
+  --color-main-white: #ffffff;
   --color-main-black: #000929;
 
   --color-secondary: ;
   --color-secondary-50: ;
   --color-secondary-100: #8b8aff;
   --color-secondary-200: ;
-  --color-secondary-300: #6851ff;
+  --color-secondary-300: #8b8aff;
   --color-secondary-400: ;
   --color-secondary-500: #6851ff;
   --color-secondary-600: #3d1efe;
@@ -31,4 +33,11 @@
   --color-base-800: ;
   --color-base-900: ;
   --color-base-950: ;
+  --color-base-1000: #000000;
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-plusjakartasans), Helvetica, sans-serif;
+  }
 }
