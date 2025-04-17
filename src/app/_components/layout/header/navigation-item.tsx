@@ -9,11 +9,11 @@ function NavigationItem({ path, label, title, handleClose }: NavigationItemProps
 
   return (
     <NavigationMenuItem>
-      <Link href={path} title={title} onClick={handleClose}>
-        <Button variant="link" className="text-2xl lg:text-base">
+      <Button variant="link" className="text-2xl lg:text-base" asChild>
+        <Link href={path} title={title} onClick={handleClose}>
           {label}
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </NavigationMenuItem>
   );
 }

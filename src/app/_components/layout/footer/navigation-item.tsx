@@ -8,14 +8,15 @@ function NavigationItem({ path, label, title }: NavigationItemProps) {
 
   return (
     <NavigationMenuItem>
-      <Link href={path} title={title}>
-        <Button
-          variant="secondary"
-          className="font-medium uppercase border-transparent text-base-1000/50 hover:border-transparent hover:text-secondary-300"
-        >
+      <Button
+        variant="secondary"
+        className="font-medium uppercase border-transparent text-base-1000/50 hover:border-transparent hover:text-secondary-300"
+        asChild
+      >
+        <Link href={path} title={title}>
           {label}
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </NavigationMenuItem>
   );
 }
