@@ -23,13 +23,13 @@ function Header() {
           </Link>
         </div>
         {isDesktop ? (
-          <div className="flex items-center gap-32">
+          <div className="flex items-center lg:gap-8 xl:gap-20 2xl:gap-32">
             <Navigation />
             <Actions />
           </div>
         ) : (
           <div className="flex items-center gap-4">
-            <Button onClick={() => setIsDrawerOpen(true)} variant="icon" className="px-2">
+            <Button onClick={() => setIsDrawerOpen(true)} variant="icon" className="border-none px-2">
               +
             </Button>
             <MobileDrawer isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
