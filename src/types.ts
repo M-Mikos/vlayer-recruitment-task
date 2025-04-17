@@ -6,9 +6,19 @@ export interface NavigationItemProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export interface NavigationItemInterface extends Omit<NavigationItemProps, "handleClose"> {
-  uuid: string;
+  uid: string;
 }
 
 export interface SocialMediaItemInterface extends NavigationItemInterface {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+}
+
+export interface StatsItemProps {
+  value: number;
+  suffix: string;
+  label: string;
+}
+
+export interface StatsItemInterface extends StatsItemProps {
+  uid: string;
 }
