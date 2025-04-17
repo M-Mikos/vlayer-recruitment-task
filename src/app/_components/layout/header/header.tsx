@@ -9,6 +9,8 @@ import { Button } from "@/common/components/ui/button";
 import Navigation from "./navigation";
 import MobileDrawer from "./mobile-drawer";
 import { useState } from "react";
+import Menu from "@/common/components/icons/menu";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 function Header() {
   const isDesktop = useMediaQuery("(min-width:64em)");
@@ -29,8 +31,13 @@ function Header() {
           </div>
         ) : (
           <div className="flex items-center gap-4">
-            <Button onClick={() => setIsDrawerOpen(true)} variant="icon" className="border-none px-2">
-              +
+            <Button
+              onClick={() => setIsDrawerOpen(true)}
+              variant="icon"
+              className="border-none text-base-1000 hover:text-secondary-300"
+            >
+              <Menu className="min-w-8 min-h-8" />
+              <VisuallyHidden>Open navigation menu</VisuallyHidden>
             </Button>
             <MobileDrawer isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
           </div>
