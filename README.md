@@ -1,15 +1,27 @@
-## Getting Started
+# Setup
 
-First, run the development server:
+To run the app on your machine you should download the repository and install all dependencies. Then create a developer build on a localhost port and run your web explorer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Clone repository
+
+```
+git clone https://github.com/M-Mikos/vlayer-recruitment-task
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
+
+```
+npm i
+```
+
+Go live with developer build
+
+```
+npm run dev
+```
+
+The app is ready at port 3000.
+
+```
+http://localhost:3000/
+```
