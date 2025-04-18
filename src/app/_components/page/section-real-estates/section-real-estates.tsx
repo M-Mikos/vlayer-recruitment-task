@@ -78,20 +78,22 @@ function SectionRealEstates() {
     <section>
       <div className="flex flex-col items-center gap-8">
         <TabsSwitch tabs={categories} current={category} setTab={setCategory} />
-        <ContentContainer className="max-w-[34rem]">
-          <Heading variant="h2" className="lg:text-center">
-            <AnimatedText
-              text="We make it easy for houses and
+        <ContentContainer className="flex justify-center">
+          <div className="max-w-[34rem]">
+            <Heading variant="h2" className="lg:text-center">
+              <AnimatedText
+                text="We make it easy for houses and
             apartments."
-            />
-          </Heading>
-          <Paragraph className="text-center">
-            <AnimatedText
-              text=" Whether it’s selling your current home, getting financing, or buying
+              />
+            </Heading>
+            <Paragraph className="text-center">
+              <AnimatedText
+                text=" Whether it’s selling your current home, getting financing, or buying
             a new home, we make it easy and efficient. The best part? you’ll
             save a bunch of money and time with our services."
-            />
-          </Paragraph>
+              />
+            </Paragraph>
+          </div>
         </ContentContainer>
         <Carousel className="max-w-dvw self-start lg:self-center">
           <CarouselContent className="px-4">
