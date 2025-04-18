@@ -6,8 +6,7 @@ import Footer from "./_components/layout/footer/footer";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Vlayer Recruitment Task by Marcin Mikos",
 };
 
 const plusJakartaSans = Plus_Jakarta_Sans({
