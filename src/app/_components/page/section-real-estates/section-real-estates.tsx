@@ -10,6 +10,8 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/common/components/ui/carousel";
+import AnimatedText from "@/common/components/ui/animated-text";
+import ContentContainer from "@/common/components/containers/content-container";
 
 function SectionRealEstates() {
   const realEstatesData = [
@@ -76,16 +78,21 @@ function SectionRealEstates() {
     <section>
       <div className="flex flex-col items-center gap-8">
         <TabsSwitch tabs={categories} current={category} setTab={setCategory} />
-        <div className="max-w-[34rem]">
+        <ContentContainer className="max-w-[34rem]">
           <Heading variant="h2" className="lg:text-center">
-            We make it easy for houses and apartments.
+            <AnimatedText
+              text="We make it easy for houses and
+            apartments."
+            />
           </Heading>
           <Paragraph className="text-center">
-            Whether it’s selling your current home, getting financing, or buying
+            <AnimatedText
+              text=" Whether it’s selling your current home, getting financing, or buying
             a new home, we make it easy and efficient. The best part? you’ll
-            save a bunch of money and time with our services.
+            save a bunch of money and time with our services."
+            />
           </Paragraph>
-        </div>
+        </ContentContainer>
         <Carousel className="max-w-dvw self-start lg:self-center">
           <CarouselContent className="px-4">
             {realEstatesData

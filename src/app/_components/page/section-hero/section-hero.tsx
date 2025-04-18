@@ -5,6 +5,7 @@ import StatsItem from "./stats-item";
 import { StatsItemInterface } from "@/types";
 import heroBackground from "@/../public/hero-background.avif";
 import Image from "next/image";
+import AnimatedText from "@/common/components/ui/animated-text";
 
 function SectionHero() {
   const realEstateData = {
@@ -33,12 +34,16 @@ function SectionHero() {
         <div className="w-full px-8 lg:w-[32rem] lg:px-16 xl:w-[40rem] 2xl:w-[48rem]">
           <div className="mb-8 lg:mb-20">
             <Heading variant="h1">
-              Buy, rent, or sell your property easily
+              <AnimatedText text="Buy, rent, or sell your property easily" />
             </Heading>
-            <Paragraph variant="large" className="text-center lg:text-left">
-              A great platform to buy, sell, or even rent
-              <br className="hidden lg:inline" />
-              your properties without any commisions.
+            <Paragraph
+              variant="large"
+              className="max-w-xl text-center lg:text-left"
+            >
+              <AnimatedText
+                text="A great platform to buy, sell, or even rent your properties
+              without any commisions."
+              />
             </Paragraph>
           </div>
           <div className="flex justify-center gap-8 lg:justify-start">
